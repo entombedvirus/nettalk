@@ -1,0 +1,9 @@
+doctype 5
+html(lang="en", ng-app='NetTalk')
+	head
+		meta(name="viewport", content="initial-scale=1.0, user-scalable=no")
+		!= css("main.css")
+		script(type="text/javascript", src="//maps.googleapis.com/maps/api/js?key=AIzaSyAh7KYXTPPuG0Iw5UWKr2HlHqoYhpSllPU&sensor=true")
+		title NetTalk
+	body(ng-view)
+		!= js("main.js")
