@@ -1,5 +1,5 @@
-class MainCtrl
-	constructor: (@google, Geolocation) ->
+angular.module('NetTalk.Controllers', [])
+	.controller 'MainCtrl', (@google, Geolocation) ->
 		# Enable the visual refresh
 		@google.maps.visualRefresh = true
 		success = (position) =>
@@ -36,8 +36,3 @@ class MainCtrl
 			strokeWeight: 1
 			fillColor: "#0000fc"
 			strokeOpacity: 0.5
-
-MainCtrl.$inject = ['google', 'Geolocation']
-
-angular.module('NetTalk.Controllers', [])
-	.controller('MainCtrl', MainCtrl);
