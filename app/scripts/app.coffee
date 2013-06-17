@@ -22,5 +22,6 @@ app.config ['$routeProvider', ($routeProvider) ->
 
 app
 	.constant('google', google ? null)
-	.constant('Tween', TWEEN)
+	.constant('TWEEN', TWEEN)
+	.constant('GoogleMaps', google?.maps)
 
