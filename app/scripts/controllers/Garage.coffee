@@ -7,11 +7,11 @@ class GarageCtrl
 	
 	draw: ->
 		@marker = new GoogleMaps.Marker
-			map: MapCtrl.getMap()
+			map: MapService.getMap()
 			position: @position
 
 
-GarageCtrl.$inject = ['GoogleMaps', MapCtrl]
+GarageCtrl.$inject = ['GoogleMaps', 'MapService']
 
 angular.module('NetTalk.Controllers')
 	.controller 'GarageCtrl', GarageCtrl

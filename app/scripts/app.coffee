@@ -1,11 +1,8 @@
 'use strict'
 
-#= require components/angular/angular.js
-#= require controllers/main.ctrl.coffee
-#= require channel.coffee
-#= require position.coffee
-#= require user.coffee
-
+# Define the service and controller modules and their dependency to each other
+services = angular.module('NetTalk.Services', [])
+controllers = angular.module('NetTalk.Controllers', ['NetTalk.Services'])
 
 app = angular.module 'NetTalk', [
 	'NetTalk.Controllers'
@@ -22,6 +19,5 @@ app.config ['$routeProvider', ($routeProvider) ->
 
 app
 	.constant('google', google ? null)
-	.constant('TWEEN', TWEEN)
+	.constant('TWEEN', TWEEN ? null)
 	.constant('GoogleMaps', google?.maps)
-
